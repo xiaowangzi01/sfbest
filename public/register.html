@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="stylesheets/register.css"/>
+	</head>
+	<body>
+		<div class="header">
+			<a href="javascript:"><img src="images/logo.png" alt="" /><span>欢迎注册</span></a>
+			
+		</div>
+		<div class="tabBox">
+			<span>个人用户</span>
+			<div class="login">
+				已有账号，立即
+				<a href="login.html">登陆</a>
+			</div>
+		</div>
+		<div class="reg_main">
+			<ul class="userBg">
+				<li class="user">
+					<label>
+						<font>*</font>
+						账户名：
+					</label>
+					<input type="text" name="" id="userName" value="" />
+					<span></span>
+				</li>
+				<li class="password">
+					<label>
+						<font>*</font>
+						登录密码：
+					</label>
+					<input type="password" name="" id="password" value="" />
+					<span></span>
+				</li>
+				<li class="safe">
+					<font>安全程度：</font>
+					<em class="weak">弱</em>
+					<em class="middle">中</em>
+					<em class="strong">强</em>
+				</li>
+				<li class="passwordTwo">
+					<label>
+						<font>*</font>
+						确认密码：
+					</label>
+					<input type="password" name="" id="passwordTwo" value="" />
+					<span></span>
+				</li>
+				<li class="verCode">
+					<label>
+						<font>*</font>
+						验证码：
+					</label>
+					<input type="text" name="" id="verCode" value="" />
+					<canvas id="canvas">点击</canvas>
+					<span>看不清？
+						<a href="javascript:" id="change">换一换</a>
+					</span>
+					<span id="codeInfor"></span>
+				</li>
+				<li>
+					<span>
+						<input type="checkbox" id="checkbox" checked="checked" />
+						<a href="">我已阅读并同意<font>《顺丰优选用户注册协议》</font></a>
+					</span>
+					<span class="agree"></span>
+				</li>
+				<li>
+					<a href="javascript:" id="btn">立即注册</a>
+				</li>
+				<li></li>
+				<br />
+				<br />
+			</ul>
+			<div class="reg_mainB">
+				<a href="javascript:">了解更多>></a>
+			</div>
+		</div>
+		<div class="footer">
+			<span>
+				<a href="javascript:">关于我们</a>
+				|
+				<a href="javascript:">联系我们</a>
+				|
+				<a href="javascript:">招聘人才</a>
+				|
+				<a href="javascript:">友情链接</a>
+			</span>
+			<p>
+				北京顺丰电子商务有限公司
+				<br />
+				北京市公安局顺义分局备案11011302000890号 |
+				<a href="javascript:">京ICP备12011349号</a>
+				|
+				<a href="javascript:">企业营业执照</a>
+				<br />
+				Copyright© 顺丰优选 sfbest.com 版权所有
+			</p>
+		</div>
+	</body>
+</html>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+	//图形验证码展示
+	var canvas = $("#canvas")[0]
+    var change = $('#change')[0]
+    var context = canvas.getContext("2d");
+    var btn = $("#btn")[0];
+    var verCode = $("#verCode")[0]
+    var str="A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,S,Y,Z,0,1,2,3,4,5,6,7,8,9";
+    var arr=str.split(",")
+    var code="";
+    var telN = /^1[3|4|5|7|8][0-9]{9}$/;
+    var pwdS = new RegExp("^(?=.{8,12})(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*\\W).*$", "g");
+	var pwdW = new RegExp("(^[0-9]{6,12}$)|(^[a-zA-Z]{6,12}$)")
+	var pwdC = new RegExp("^(?=.{7,12})(((?=.*[A-Z])(?=.*[a-z]))|((?=.*[A-Z])(?=.*[0-9]))|((?=.*[a-z])(?=.*[0-9]))).*$", "g")
+    for(var i=0;i<4;i++){
+        var ran = parseInt(Math.random()*arr.length);
+        code+=arr[ran];
+    }
+    context.font='70px Arial';
+    context.fillText(code,20,110);
+    context.bezierCurveTo(15,80,78,22,110,33);
+    change.onclick=function(){
+        code="";
+        for(var i=0;i<4;i++){
+            var ran = parseInt(Math.random()*arr.length);
+            code+=arr[ran];
+        }
+        context.clearRect(0,0,1000,1000);
+        context.fillText(code,40,110);
+    }
+    //验证用户名
+    $("#userName").focus(function(){
+    	$(".user span").html("请输入手机号")
+    })
+    $("#userName").blur(function(){
+    	if(telN.test($("#userName").val())){
+    		$.post("/users/finduser",{
+    			name:$("#userName").val()
+    		}).then((res)=>{
+    			if(res.data){
+    				$(".user span").html("用户名已存在")
+    			}else{
+    				$(".user span").html("√")
+    				//验证密码
+    				$("#password").focus(function(){
+				    	$(".password span").html("6-12位字符，必须包含字符数字下划线")
+				    })
+				    $("#password").blur(function(){
+				    	$(".safe em").removeClass("active")
+				    	console.log($("#password").val())
+				    	if($("#password").val()===""){
+				    		$(".password span").html("密码不能为空")
+				    		return false;
+				    	}
+					    $(".password span").html("√")
+				    	if(pwdS.test($("#password").val())){
+				    		$(".strong").addClass("active")
+				    	}else if(pwdC.test($("#password").val())){
+				    		$(".middle").addClass("active")
+				    	}else if(pwdW.test($("#password").val())){
+				    		$(".weak").addClass("active")
+				    	}
+				    	else{
+
+				    		$(".password span").html("请按要求输入密码")
+				    		return false;
+				    	}
+				    	console.log('222')
+				    		//二次验证密码
+			    		$("#passwordTwo").focus(function(){
+					    	$(".passwordTwo span").html("请再次输入密码")
+					    })
+					    $("#passwordTwo").blur(function(){
+					    	if($("#passwordTwo").val()===""){
+					    		$(".passwordTwo span").html("密码不能为空")
+					    		return false;
+					    	}else if($("#passwordTwo").val()===$("#password").val()){
+					    		$(".passwordTwo span").html("√")
+					    		//验证图形验证码
+					    		$("#verCode").focus(function(){
+					    			$("#codeInfor").html("请输入验证码")
+					    			return false;
+					    		})
+					    		$("#verCode").blur(function(){
+					    			if(verCode.value.toLowerCase()!=code.toLowerCase()){
+							    		$("#codeInfor").html("验证码不正确")
+							    		return false;
+							    	}else{
+							    		$("#codeInfor").html("√")
+							    		//验证是否同意协议
+							    		if($("#checkbox").is(":checked")){
+							    			console.log('验证成功')
+								    		$(".agree").html("")
+											//提交注册
+								    		btn.onclick=function(){
+								    			$.post("/users/register",{
+								    				name:$("#userName").val(),
+								    				password:$("#password").val()
+								    			}).then((res)=>{
+								    				if(res.ret){
+								    					alert("注册成功")
+								    				}else{
+								    					alert("注册失败")
+								    				}
+								    			})
+								    		}
+								    	}else{
+								    		$(".agree").html("请阅读并同意注册协议")
+								    		return false;
+								    	}
+							    	}
+					    		})
+					    		
+					    	}else{
+					    		$(".passwordTwo span").html("两次输入的密码不一致")
+					    		return false;
+					    	}
+					    })
+				    	
+				    })
+
+
+    			}
+    		})
+    	}else{
+    		$(".user span").html("请输入正确手机号")
+    		return false;
+    	}
+    })
+</script>

@@ -1,0 +1,187 @@
+/* 全局样式 */
+h1,h2,h3,h4,h5,h6,p,a,em,font,img,strong,b,dl,dt,dd,form,label,ol,ul,li,legend,span,input,body{margin:0;padding:0;}
+li{list-style:none;}
+img{border:none; vertical-align:middle;}
+a{text-decoration:none;color: #666666;}
+h1,h2,h3,h4,h5,h6,b,strong{font-weight:normal;}
+em,i{font-style:normal;}
+body{font:12px/150% "微软雅黑";color:#666666; background: #F5F5F5;}
+.left{float:left;}
+.right{float:right;}
+.clearBoth{clear:both;height:0;overflow:hidden;}
+
+.header{
+	width: 1000px;
+	height: 75px;
+	margin: 0 auto;
+}
+.header img{
+	margin: 10px 0;
+	float: left;
+	
+}
+.header span{
+	line-height: 70px;
+	font-size: 24px;
+	padding-left: 3px;
+	margin: 10px 0;
+	float: left;
+}
+.tabBox{
+	width: 666px;
+	margin: 0 auto;
+	padding-left: 333px;
+	height: 37px;
+}
+.tabBox span{
+	width: 163px;
+	height: 38px;
+	display: block;
+	float: left;
+	text-align: center;
+	line-height: 38px;
+	background: url(../images/tabbg.jpg) no-repeat left top;
+	font-size: 16px;
+	margin-left: -65px;
+}
+.login{
+	width: 130px;
+	float: right;
+	padding-top: 14px;
+	font-size: 12px;
+	color: #565656;
+}
+.login a{
+	color: #6e9b0c;
+}
+.reg_main{
+	border-top: 1px solid #d6d5d5;
+	padding: 45px 0 0 40px;
+	width: 960px;
+	height: auto;
+	min-height: 490px;
+	background: #fff;
+	margin: 0 auto;
+}
+.userBg{
+	background: url(../images/pic10.jpg.png) 460px 0 no-repeat;
+	position: relative;
+	height: 405px;
+}
+.userBg li{
+	height: 38px;
+}
+.userBg li:nth-child(1),.userBg li:nth-child(4){
+	margin-bottom: 30px;
+}
+.userBg li label{
+	width: 118px;
+	height: 38px;
+	color: #515151;
+	line-height: 38px;
+	text-align: right;
+	font-size: 14px;
+	display: inline-block;
+}
+.userBg li label font{
+	color: #ff4800;
+}
+.userBg li input{
+	width: 268px;
+	height: 36px;
+	line-height: 36px;
+	border: 1px solid #DCDCDC;
+	
+}
+.userBg li:nth-child(3){
+	padding-top: 5px;
+	color: #666;
+	padding-left: 191px;
+}
+.userBg li:nth-child(3) em{
+	width: 34px;
+	margin-right: 2px;
+	color: #fff;
+	text-align: center;
+	background: #c4c4c4;
+	display: inline-block;
+}
+.userBg li:nth-child(3) .active{
+	background: red;
+}
+.userBg li:nth-child(5){
+	margin-bottom: 30px;
+}
+.userBg li:nth-child(5) input{
+	padding: 0 5px;
+	width: 58px;
+	height: 36px;
+}
+.userBg li:nth-child(5) canvas{
+	width: 106px;
+	height: 38px;
+	margin-left: 6px;
+	margin-bottom: -15px;
+	border: 1px solid #DCDCDC;
+}
+.userBg li:nth-child(5) span{
+	margin-left: 6px;
+}
+.userBg li:nth-child(6){
+	padding-left: 88px;
+	line-height: 38px;
+}
+.userBg li:nth-child(6) span{
+	width: 268px;
+	height: 36px;
+	line-height: 36px;
+	
+}
+.userBg li:nth-child(6) input{
+	width: 12px;
+	height: 12px;
+}
+.userBg li:nth-child(7){
+	margin: 10px 0 0 29px;
+	padding-left: 88px;
+}
+.userBg li:nth-child(7) a{
+	display: block;
+	float: left;
+	width: 271px;
+	height: 38px;
+	background: url(../images/reg_btn.jpg) no-repeat;
+	font-size: 16px;
+	text-align: center;
+	color: #fff;
+	line-height: 38px;
+}
+.reg_mainB{
+	padding: 15PX 10px 10px 45px;
+	border-top: 1px dotted #DCDCDC;
+	position: relative;
+	left: -30px;
+	width: 930px;
+	background: url(../images/reg_tip.png) no-repeat 25px 16px;
+}
+.reg_mainB a{
+	color: #669900;
+}
+/*footer*/
+.footer{
+	width: 1000px;
+	margin: 0 auto;
+	padding-top: 20px;
+}
+.footer span{
+	display: block;
+	color: #176246;
+	text-align: center;
+	line-height: 26px;
+}
+.footer p{
+	line-height: 26px;
+	text-align: center;
+	margin: 0 auto;
+	height: 100px;
+}

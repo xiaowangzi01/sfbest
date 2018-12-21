@@ -1,0 +1,310 @@
+/* 全局样式 */
+h1,h2,h3,h4,h5,h6,p,a,em,font,img,strong,b,dl,dt,dd,form,label,ol,ul,li,legend,span,input,body{margin:0;padding:0;}
+li{list-style:none;}
+img{border:none; vertical-align:middle;}
+a{text-decoration:none;color: #666666;}
+h1,h2,h3,h4,h5,h6,b,strong{font-weight:normal;}
+em,i{font-style:normal;}
+body{font:12px/150% "微软雅黑";color:#666666;}
+.left{float:left;}
+.right{float:right;}
+.clearBoth{clear:both;height:0;overflow:hidden;}
+
+/*header*/
+.header{
+	width: 1000px;
+	height: 75px;
+	margin: 0 auto;
+}
+.header img{
+	margin: 10px 0;
+	float: left;
+	
+}
+.header span{
+	line-height: 70px;
+	font-size: 18px;
+	padding-left: 3px;
+	margin: 10px 0;
+	float: left;
+}
+/*登陆*/
+.login_main{
+	width: 1000px;
+	min-height: 500px;
+	background: #fff;
+	margin: 0 auto;
+	clear: both;
+}
+.login_main .pic{
+	padding-top: 14px;
+	width: 540px;
+	height: 390px;
+	float: left;
+}
+.login_main .pic img{
+	margin-top: 32px;
+}
+.login{
+	width: 400px;
+	min-height: 100px;
+	float: left;
+}
+.login h2{
+	width: 400px;
+	height: 50px;
+	line-height: 50px;
+}
+.login h2 span{
+	display: block;
+	color: #000;
+	font-size: 20px;
+	float: left;
+	height: 26px;
+	line-height: 26px;
+	margin-top: 14px;
+}
+.login h2 a{
+	display: block;
+	font-size: 14px;
+	color: #666;
+	width: 80px;
+	height: 30px;
+	text-align: center;
+	margin-top: 4px;
+	border-radius: 3px;
+	float: right;
+}
+.login h2 i{
+	width: 19px;
+	height: 19px;
+	display: inline-block;
+	background: url(../images/login-icon28.png) no-repeat;
+	position: relative;
+	top: 4px;
+}
+.login_Box{
+	position: relative;
+	left: 0;
+	top: 0;
+	border: 1px solid #ededed;
+	min-height: 150px;
+}
+.loginNav{
+	width: 100%;
+	overflow: hidden;
+}
+.loginNav li{
+	color: #666;
+	border-bottom: 1px solid #EDEDED;
+	border-right: 1px solid #EDEDED;
+	height: 38px;
+	width: 132px;
+	float: left;
+	font-size: 14px;
+	line-height: 38px;
+	cursor: pointer;
+}
+.loginNav .cur{
+	border-bottom: 1px solid #fff;
+	border-top: 2px solid #69af05;
+	margin-top: -2px;
+}
+.loginNav li em{
+	margin: 10px 5px 0 24px;
+	background: url(../images/loginicon.png);
+	width: 15px;
+	height: 15px;
+	float: left;
+}
+.loginNav li:nth-child(3){
+	border-right: none;
+}
+.loginNav li:nth-child(2) em{
+	background-position: 0 -25px;
+}
+.loginNav li:nth-child(3) em{
+	background-position: 0 -48px;
+}
+.logincon{
+	width: 348px;
+	padding-left: 25px;
+}
+.logincon .loginErro{
+	margin: 6px 0;
+	height: 26px;
+	line-height: 26px;
+	background: #fdefec;
+	border: 1px solid #ffb6a9;
+	color:#ff4422;
+}
+.erroIcon{
+	width: 18px;
+	height: 18px;
+	display: inline-block;
+	padding-right: 11px;
+	position: relative;
+	top: 4px;
+	left: 7px;
+	background: url(../images/login-icon5.png) no-repeat;
+}
+.erroTips{
+	display: inline-block;
+	line-height: 26px;
+	margin-top: 0;
+}
+.phone-icon{
+	width: 41px;
+	height: 40px;
+	float: left;
+	border: 1px solid #DBDBDB;
+	background: #F0F0F0;
+}
+.logincon input{
+	width: 294px;
+	height: 40px;
+	padding: 0 5px;
+	border: 1px solid #DBDBDB;
+	border-left: none;
+	
+}
+.phone-icon span{
+	width: 18px;
+	height: 18px;
+	margin-left: 12px;
+	position: relative;
+	top: 12px;
+	display: block;
+}
+.logincon li:nth-child(1) .phone-icon span{
+	background: url(../images/login-icon24.png) no-repeat;
+}
+.logincon li:nth-child(2) .phone-icon span{
+	background: url(../images/login-icon7.png) no-repeat;
+}
+.logincon li:nth-child(2){
+	margin-top: 14px;
+}
+.logincon li:nth-child(3){
+	margin-top: 14px;
+	position: relative;
+}
+.logincon li:nth-child(3) .phone-icon span{
+	background: url(../images/login-icon20.png) no-repeat;
+}
+.logincon li:nth-child(3) input{
+	width: 170px;
+	height: 40px;
+	padding: 0 129px 0 5px;
+	border: 1px solid #DBDBDB;
+	border-left: none;
+}
+.logincon li:nth-child(3) canvas{
+	position: absolute;
+	left: 238px;
+	top: 2px;
+	width: 107px;
+	height: 38px;
+	cursor: pointer;
+	background: #ddd;
+}
+.logincon li:nth-child(4){
+	margin-top: 45px;
+}
+.logincon li:nth-child(4) a{
+	height: 39px;
+	line-height: 39px;
+	text-align: center;
+	color: #fff;
+	font-size: 16px;
+	background: #8dc63f;
+	border-radius: 4px;
+	display: block;
+}
+.logincon li:nth-child(5){
+	height: 18px;
+	padding: 16px 0 21px;
+}
+.logincon li:nth-child(5) a{
+	display: inline-block;
+	height: 18px;
+	line-height: 18px;
+	color: #666666;
+	font-size: 12px;
+	
+}
+.blink{
+	width: 356px;
+	margin: 0 auto;
+	height: 48px;
+	border-top: 1px solid #EDEDED;
+}
+.blink li{
+	width: 86px;
+	height: 20px;
+	border-right: 1px solid#EDEDED;
+	float: left;
+	margin: 10px 0;
+	text-align: center;
+}
+.blink li:nth-child(1) span{
+	height: 20px;
+	display: inline-block;
+	cursor: pointer;
+	width: 20px;
+	background: url(../images/logo-icon.jpg) no-repeat;
+	position: relative;
+	top:3px
+}
+.blink li a{
+	color: #515151;
+	height: 26px;
+	line-height: 26px;
+	display: inline-block;
+
+}
+.blink li:nth-child(2) span{
+	height: 20px;
+	display: inline-block;
+	cursor: pointer;
+	width: 20px;
+	background: url(../images/logo-icon.jpg) no-repeat -21px 0;
+	position: relative;
+	top:3px
+}
+.blink li:nth-child(3) span{
+	height: 20px;
+	display: inline-block;
+	cursor: pointer;
+	width: 20px;
+	background: url(../images/logo-icon.jpg) no-repeat -63px 0;
+	position: relative;
+	top:3px
+}
+.blink li:nth-child(4) span{
+	height: 20px;
+	display: inline-block;
+	cursor: pointer;
+	width: 20px;
+	background: url(../images/logo-icon.jpg) no-repeat -84px 0;
+	position: relative;
+	top:3px
+}
+/*footer*/
+.footer{
+	width: 1000px;
+	margin: 0 auto;
+	padding-top: 20px;
+}
+.footer span{
+	display: block;
+	color: #176246;
+	text-align: center;
+	line-height: 26px;
+}
+.footer p{
+	line-height: 26px;
+	text-align: center;
+	margin: 0 auto;
+	height: 100px;
+}

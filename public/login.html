@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="stylesheets/login.css"/>
+		
+	</head>
+	<body>
+		<!--header-->
+		<div class="header">
+			<a href="javascript:">
+				<img src="images/logo.png"/>
+				<span>欢迎登陆</span>
+			</a>
+		</div>
+		<div class="login_main">
+			<div class="pic">
+				<a href="javascript:"><img src="images/bd7564f1def72d570d822c7451c6cbd9.png" alt="" /></a>
+			</div>
+			<div class="login">
+				<h2>
+					<span>登录</span>
+					<a href="register.html">立即注册<i></i></a>
+				</h2>
+				<div class="login_Box">
+					<ul class="loginNav">
+						<li class="cur">
+							<em></em>
+							优选账号
+						</li>
+						<li>
+							<em></em>
+							顺手付账号
+						</li>
+						<li>
+							<em></em>
+							速运账号
+						</li>
+					</ul>
+					<ul class="logincon">
+						<li>
+							<div class="loginErro">
+								<span class="erroIcon"></span>
+								<span class="erroTips">账户名或密码错误</span>
+							</div>
+							<div class="phone-icon">
+								<span></span>
+							</div>
+							<input type="" name="" id="" value="" placeholder="请输入手机号/邮箱/用户名" />
+						</li>
+						<li>
+							<div class="phone-icon">
+								<span></span>
+							</div>
+							<input type="" name="" id="" value="" placeholder="请输入密码"/>
+						</li>
+						<li>
+							<div class="phone-icon">
+								<span></span>
+							</div>
+							<input type="" name="" id="" value="" placeholder="请输入验证码"/>
+							<!-- <img src="images/vcode.jpg"/> -->
+							<canvas id="canvas">点击</canvas>
+						</li>
+						<li>
+							<a href="javascript:">登录</a>
+						</li>
+						<li>
+							<a href="javascript:">手机验证登录 > </a>
+							<a class="right" href="javascript:">忘记密码?</a>
+						</li>
+					</ul>
+					<ul class="blink">
+						<li>
+							<div class="">
+								<span></span>
+								<a href="javascript:">QQ</a>
+							</div>
+						</li>
+						<li>
+							<div class="">
+								<span></span>
+								<a href="javascript:">新浪微博</a>
+							</div>
+						</li>
+						<li>
+							<div class="">
+								<span></span>
+								<a href="javascript:">支付宝</a>
+							</div>
+						</li>
+						<li>
+							<div class="">
+								<span></span>
+								<a href="javascript:">微信</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<span>
+				<a href="javascript:">关于我们</a>
+				|
+				<a href="javascript:">联系我们</a>
+				|
+				<a href="javascript:">招聘人才</a>
+				|
+				<a href="javascript:">友情链接</a>
+			</span>
+			<p>
+				北京顺丰电子商务有限公司
+				<br />
+				北京市公安局顺义分局备案11011302000890号 |
+				<a href="javascript:">京ICP备12011349号</a>
+				|
+				<a href="javascript:">企业营业执照</a>
+				<br />
+				Copyright© 顺丰优选 sfbest.com 版权所有
+			</p>
+		</div>
+	</body>
+</html>
+<script type="text/javascript">
+	(function(){
+		var canvas = document.getElementById("canvas");
+	    var context = canvas.getContext("2d");
+	    var str="A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,S,Y,Z,0,1,2,3,4,5,6,7,8,9";
+	    var arr=str.split(",")
+	    var code="";
+	    for(var i=0;i<4;i++){
+	        var ran = parseInt(Math.random()*arr.length);
+	        code+=arr[ran];
+	    }
+	    context.font='70px Arial';
+	    context.fillText(code,20,110);
+	    context.bezierCurveTo(15,80,78,22,110,33);
+	    canvas.onclick=function(){
+	        code="";
+	        for(var i=0;i<4;i++){
+	            var ran = parseInt(Math.random()*arr.length);
+	            code+=arr[ran];
+	        }
+	        context.clearRect(0,0,1000,1000);
+	        context.fillText(code,40,110);
+	    }
+	})()
+</script>

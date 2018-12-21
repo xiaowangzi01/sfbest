@@ -1,0 +1,130 @@
+.footerBot{
+	width: 100%;
+	height: 285px;
+}
+.footerBot_top{
+	width: 1200px;
+	margin: 0 auto;
+}
+.footerBot_top_L{
+	float: left;
+	width: 290px;
+	height: 145px;
+	margin: 20px 0 0 10px;
+	background: url(../img/logo.jpg) no-repeat left top;
+	
+}
+.footerBot_top_L ul{
+	padding-top: 85px;
+}
+.footerBot_top_L ul li:nth-child(1){
+	font-size: 20px;
+	color: #646464;
+	font-weight: bold;
+	padding: 6px 0;
+}
+.footerBot_top_M{
+	width: 645px;
+	float: left;
+	margin-top: 35px;
+}
+.footerBot_top_M ul{
+	float: left;
+	margin-right: 8px;
+	width: 120px;
+}
+.footerBot_top_M ul li{
+	text-align: left;
+	height: 24px;
+	line-height: 24px;
+	color: #646464;
+}
+.footerBot_top_M ul li a{
+	color: #646464;
+}
+.footerBot_top_M ul li:hover a{
+	color: #669900;
+}
+.footerBot_top_M .title{
+	color: #707070;
+	font-size: 14px;
+	font-weight: bold;
+}
+.footerBot_top_R{
+	width: 235px;
+	height: 145px;
+	float: left;
+	margin-top: 35px;
+}
+.footerBot_top_R ul{
+	float: left;
+}
+.footerBot_top_R ul:nth-child(1){
+	margin-right: 50px;
+}
+.footerBot_top_R ul li{
+	width: 80px;
+	text-align: center;
+	margin-bottom: 8px;
+	line-height: 24px;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.footerBot_top_R ul a{
+	color: #646464;
+}
+.footerBot_top_R ul:nth-child(1) span{
+	display: block;
+	width: 80px;
+	height: 80px;
+	background: url(../img/foot_bottom.png) no-repeat 0 0;
+	margin: 0 auto;
+}
+.footerBot_top_R ul:nth-child(2) span{
+	display: block;
+	width: 80px;
+	height: 80px;
+	background: url(../img/foot_bottom.png) no-repeat -83px 0;
+	margin: 0 auto;
+}
+.footerBot_bot{
+	width: 1180px;
+	height: 50px;
+	margin: 0 auto;
+	border-top: 1px solid #e0e0e0;
+	padding-top: 15px;
+}
+.footerBot_bot div{
+	width: 91px;
+	height: 33px;
+	margin-right: 5px;
+	float: left;
+	position: relative;
+}
+.footerBot_bot div img{
+	width: 91px;
+	height: 33px;
+	position: absolute;
+}
+.footerBot_bot div:nth-child(1):hover img{
+	width: 128px;
+	height: 47px;
+	top: -7px;
+	left: -17px;
+	z-index: 1;
+}
+.footerBot_bot .siteinfo{
+	width: 600px;
+	height: 36px;
+}
+.footerBot_bot .siteinfo ul li{
+	float: left;
+	padding-right: 13px;
+}
+.footerBot_bot a{
+	color: #646464;
+}
+.footerBot_bot a:hover{
+	color: #669900;
+}
